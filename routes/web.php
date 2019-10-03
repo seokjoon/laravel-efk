@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () { return view('welcome'); });
+Route::get('/', function () { return redirect('logs'); });
+
+Route::resource('/logs', 'LogsController', ['name' => ['index' => 'logs'],]);
